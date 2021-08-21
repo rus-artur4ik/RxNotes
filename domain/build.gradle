@@ -9,5 +9,6 @@ java {
 }
 
 dependencies {
-    implementation project(path: ':data')
+    implementation project(path: ':core')
 }
+
