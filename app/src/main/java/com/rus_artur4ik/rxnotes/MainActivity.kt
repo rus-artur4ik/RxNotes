@@ -1,4 +1,4 @@
-wdqpackage com.rus_artur4ik.rxnotes
+package com.rus_artur4ik.rxnotes
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
