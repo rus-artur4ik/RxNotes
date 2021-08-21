@@ -5,9 +5,6 @@ plugins {
 ext.koinVersion = "3.1.0"
 
 dependencies {
-    // DI
-    // Koin for Kotlin Multiplatform
-    implementation("io.insert-koin:koin-core:$koinVersion")
     //rx
-    implementation('io.reactivex.rxjava3:rxjava:3.0.3')
+    implementation "io.reactivex.rxjava3:rxjava:$rxjava_version"
 }
