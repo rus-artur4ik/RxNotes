@@ -1,9 +1,26 @@
 plugins {
-    id 'java-library'
-    id 'kotlin'
+    id("com.android.application")
+    id("kotlin-android")
+    id("kotlin-kapt")
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
+android {
+    compileSdk 31
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+ext.koinVersion = "3.1.0"
+
+dependencies {
+    // DI
+    // Koin for Kotlin Multiplatform
+    implementation("io.insert-koin:koin-core:$koinVersion")
+    // Koin main features for Android (Scope,ViewModel ...)
+    implementation("io.insert-koin:koin-android:$koinVersion")
+    implementation("io.insert-koin:koin-ktor:$koinVersion")
+    //rx
+    implementation('io.reactivex.rxjava3:rxjava:3.0.3')
 }

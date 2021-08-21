@@ -3,6 +3,8 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="RxNotes.app" target="11" />
+      <module name="RxNotes.core" target="11" />
+      <module name="RxNotes.data" target="11" />
       <module name="RxNotes.notes" target="11" />
     </bytecodeTargetLevel>
   </component>

@@ -3,7 +3,6 @@ plugins {
     id("kotlin-android")
     id("kotlin-parcelize")
     id("kotlin-kapt")
-    id('org.jetbrains.kotlin.plugin.serialization') version('1.5.21')
 }
 
 android {
@@ -50,8 +49,7 @@ android {
     }
 }
 
-ext.koinVersion = "3.1.0"
-ext.roomVersion = "2.3.0"
+
 
 dependencies {
 
@@ -74,27 +72,7 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 
-    // Database
-    implementation("androidx.room:room-runtime:$roomVersion")
-    implementation("androidx.room:room-ktx:$roomVersion")
-    kapt("androidx.room:room-compiler:$roomVersion")
 
-    // DI
-    // Koin for Kotlin Multiplatform
-    implementation("io.insert-koin:koin-core:$koinVersion")
-    // Koin main features for Android (Scope,ViewModel ...)
-    implementation("io.insert-koin:koin-android:$koinVersion")
-    implementation("io.insert-koin:koin-ktor:$koinVersion")
-
-    //kotlin serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
-
-    //retrofit
-    implementation('com.squareup.retrofit2:retrofit:2.9.0')
-    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
-
-    //rx
-    implementation('io.reactivex.rxjava3:rxjava:3.0.3')
 
     //rxbinding
     implementation('com.jakewharton.rxbinding4:rxbinding:4.0.0')
