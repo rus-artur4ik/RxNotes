@@ -15,13 +15,22 @@ interface NoteDao {
     fun getAll(): List<Note>
 
     @Query("SELECT * FROM Note")
-    fun getAllWithFields(userIds: IntArray): List<NoteFields>
+    fun getAllWithFields(): List<NoteFields>
 
     @Query("SELECT * FROM Note WHERE title LIKE :title")
     fun findByName(title: String): List<NoteFields>
 
     @Insert
-    fun insertAll(users: Array<NoteFields>)
+    fun insert(note: Note)
+
+    @Insert
+    fun insert(field: Field)
+
+    @Insert
+    fun insertNotes(notes: List<Note>)
+
+    @Insert
+    fun insertFields(fields: List<Field>)
 
     @Delete
     fun delete(note: Note)

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rus_artur4ik.rxnotes">
+    package="com.rus_artur4ik.data">
 
     <application>
 
